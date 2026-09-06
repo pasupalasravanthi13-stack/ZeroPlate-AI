@@ -1,0 +1,6 @@
+<!doctype html><html><head><title>Dashboard</title><link rel="stylesheet" href="/static/style.css"></head><body>
+<nav><b>ZERO PLATE AI</b><span>Impact Dashboard</span><a href="/">New Prediction</a></nav><main><h1>Dashboard</h1>
+<div class="grid"><div><small>Predictions</small><strong>{{count}}</strong></div><div><small>Average Predicted Demand</small><strong>{{avg}}</strong></div></div>
+<table><tr><th>Date</th><th>Meal</th><th>Attendance</th><th>Predicted</th><th>Recommended</th></tr>
+{% for r in rows %}<tr><td>{{r.created_at}}</td><td>{{r.meal}}</td><td>{{r.attendance}}</td><td>{{r.predicted|round|int}}</td><td>{{r.recommended}}</td></tr>{% endfor %}</table>
+<p class="note">Real waste-reduction impact should be measured during a pilot.</p></main></body></html>

@@ -1,0 +1,10 @@
+<!doctype html><html><head><title>ZeroPlate AI</title><link rel="stylesheet" href="/static/style.css"></head><body>
+<nav><b>ZERO PLATE AI</b><span>Predict. Prepare. Prevent Waste.</span><a href="/dashboard">Dashboard</a></nav>
+<main><h1>Smart Meal Demand Prediction</h1><p>Enter kitchen data to estimate demand and recommended preparation.</p>
+<form action="/predict" method="post">
+<label>Meal Type</label><select name="meal"><option>Breakfast</option><option>Lunch</option><option>Dinner</option></select>
+<label>Expected Attendance</label><input name="attendance" type="number" value="450" min="1" required>
+<label>Previous Day Meals Consumed</label><input name="previous" type="number" value="420" min="1" required>
+<label>7-Day Average Meals</label><input name="avg7" type="number" value="430" min="1" required>
+<label>Special Event?</label><select name="event"><option value="no">No</option><option value="yes">Yes</option></select>
+<button>Predict Demand</button></form><p class="note">Demo model uses generated sample data; replace with real pilot data later.</p></main></body></html>
